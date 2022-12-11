@@ -1,0 +1,14 @@
+{
+  "posts": [
+    {
+      "name": "json-server",
+      "author": "typicode1",
+      "id": 1
+    },
+    {
+      "name": "Talha Farooq",
+      "author": "Talha Farooq123",
+      "id": 3
+    }
+  ]
+}
