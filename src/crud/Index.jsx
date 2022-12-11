@@ -1,7 +1,11 @@
-import axios from 'axios';
 import React, { Component, Fragment } from 'react'
 import { Button, Container, Form, Table } from 'react-bootstrap'
 import { Link } from 'react-router-dom';
+import axios from 'axios';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPencil, faTrash } from '@fortawesome/free-solid-svg-icons';
+
 
 export default class Index extends Component {
     constructor() {
@@ -72,8 +76,8 @@ export default class Index extends Component {
                                             <td>{v.name}</td>
                                             <td>{v.author}</td>
                                             <td>
-                                                <Button variant="danger" onClick={() => { this.handleDelete(v.id) }}>Delete</Button>
-                                                <Link to={'edit/' + v.id} state={{ "id": v.id, "name": v.name, "author": v.author }} className="btn btn-info">Edit</Link>
+                                                <Button variant="danger" onClick={() => { this.handleDelete(v.id) }}><FontAwesomeIcon icon={faTrash} /></Button>{' '}
+                                                <Link to={'edit/' + v.id} state={{ "id": v.id, "name": v.name, "author": v.author }} className="btn btn-info"><FontAwesomeIcon icon={faPencil} /></Link>
                                             </td>
                                         </tr>
                                     )
